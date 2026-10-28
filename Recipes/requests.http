@@ -1,0 +1,14 @@
+### The first recipe, as a web page
+GET http://localhost:3000/
+
+### Every recipe, as JSON (step 4)
+GET http://localhost:3000/recipes
+
+### One recipe by its number (step 5)
+GET http://localhost:3000/recipes/1
+
+### A number that doesn't exist (step 5 TODO)
+GET http://localhost:3000/recipes/99
+
+### Recipes with an ingredient (step 6)
+GET http://localhost:3000/search?ingredient=Eggs

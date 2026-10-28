@@ -1,0 +1,23 @@
+[
+  {
+    "title": "Pasta Carbonara",
+    "ingredients": ["Spaghetti", "Eggs", "Bacon", "Parmesan", "Pepper"],
+    "instructions": "Cook spaghetti. Mix eggs, bacon, and Parmesan. Combine with cooked spaghetti. Add pepper to taste."
+  },
+  {
+    "title": "Chicken Stir-Fry",
+    "ingredients": ["Chicken", "Vegetables", "Soy Sauce", "Ginger", "Garlic"],
+    "instructions": "Stir-fry chicken and vegetables. Add soy sauce, ginger, and garlic. Cook until chicken is done."
+  },
+  {
+    "title": "Chocolate Chip Cookies",
+    "ingredients": ["Flour", "Sugar", "Butter", "Chocolate Chips", "Vanilla Extract"],
+    "instructions": "Preheat oven. Mix flour, sugar, butter, chocolate chips, and vanilla extract. Form dough into cookies. Bake until golden brown."
+  },
+  {
+    "title": "Caprese Salad",
+    "ingredients": ["Tomatoes", "Mozzarella", "Basil", "Olive Oil", "Balsamic Vinegar"],
+    "instructions": "Slice tomatoes and mozzarella. Arrange on a plate with basil leaves. Drizzle with olive oil and balsamic vinegar. Season with salt and pepper."
+  }
+]
+  

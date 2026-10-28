@@ -1,0 +1,32 @@
+### 1. A random joke
+GET http://localhost:3000/random
+
+### 2. Joke number 3
+GET http://localhost:3000/jokes/3
+
+### 2. A joke that doesn't exist
+GET http://localhost:3000/jokes/99
+
+### 3. Only the Puns
+GET http://localhost:3000/filter?type=Puns
+
+### 4. Add a joke (the body is sent the same way a form sends it)
+POST http://localhost:3000/jokes
+Content-Type: application/x-www-form-urlencoded
+
+text=Why did the developer go broke? He used up all his cache.&type=Programming
+
+### 5. Replace joke 1 completely
+PUT http://localhost:3000/jokes/1
+Content-Type: application/x-www-form-urlencoded
+
+text=I would tell you a UDP joke, but you might not get it.&type=Programming
+
+### 6. Change only the type of joke 2
+PATCH http://localhost:3000/jokes/2
+Content-Type: application/x-www-form-urlencoded
+
+type=Chemistry
+
+### 7. Delete joke 4
+DELETE http://localhost:3000/jokes/4
