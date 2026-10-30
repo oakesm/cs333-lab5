@@ -29,6 +29,22 @@ app.get("/", function (req, res) {
 });
 
 // Your routes go here
+app.get("/recipes", function (req, res) {
+  res.json(getRecipes());
+});
+
+app.get("/recipes/:index", function (req, res) {
+  const index = parseInt(req.params.index);
+  const recipe = getRecipes()[index];
+  if (!recipe) return res.status(404).send("No recipe number " + index);
+  res.send(recipePage(recipe));
+});
+
+app.get("/search", function (req, res) {
+  const ingredient = req.query.ingredient;
+  const found = getRecipes().filter((recipe) => recipe.ingredients.includes(ingredient));
+  res.json(found);
+});
 
 app.listen(port, function () {
   console.log("Listening on http://localhost:" + port);

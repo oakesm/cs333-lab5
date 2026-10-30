@@ -18,6 +18,16 @@
     "title": "Caprese Salad",
     "ingredients": ["Tomatoes", "Mozzarella", "Basil", "Olive Oil", "Balsamic Vinegar"],
     "instructions": "Slice tomatoes and mozzarella. Arrange on a plate with basil leaves. Drizzle with olive oil and balsamic vinegar. Season with salt and pepper."
+  },
+  {
+    "title": "Beef Tacos",
+    "ingredients": ["Ground Beef", "Taco Shells", "Lettuce", "Cheese", "Salsa"],
+    "instructions": "Cook ground beef with seasoning. Fill taco shells with beef, lettuce, cheese, and salsa. Serve immediately."
+  },
+  {
+    "title": "Vegetable Soup",
+    "ingredients": ["Carrots", "Celery", "Onions", "Tomatoes", "Vegetable Broth"],
+    "instructions": "Chop vegetables. Sauté onions, carrots, and celery. Add tomatoes and vegetable broth. Simmer until vegetables are tender."
   }
 ]
   

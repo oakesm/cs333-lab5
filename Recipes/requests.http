@@ -11,4 +11,4 @@ GET http://localhost:3000/recipes/1
 GET http://localhost:3000/recipes/99
 
 ### Recipes with an ingredient (step 6)
-GET http://localhost:3000/search?ingredient=Eggs
+GET http://localhost:3000/search?ingredient=eggs
