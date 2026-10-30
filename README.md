@@ -34,12 +34,19 @@ Open `http://localhost:3000`.
 
 **Question 1:** which recipe do you see? Which line of `index.js` picks that one?
 
+Pasta Carbonara
+
+res.send(recipePage(recipes[0]));
+
 ## 2. Add your own recipes
 
 Add **two** recipes of your own to the end of `recipes.json`, in the same shape as the others. Reload the page.
 
 **TODO:** take away one comma between two recipes, save, and reload the page.
 **Question 2:** what does the server terminal say? Why is JSON this strict? (Week 3 slides.) Put the comma back.
+
+SyntaxError: Expected ',' or ']' after array element in JSON at position 1328 (line 27 column 3)
+JSON is this stricts to help keep the elements seperate so it is clear format
 
 ## 3. Send a request without the browser
 
@@ -59,6 +66,8 @@ Send the second request in `requests.http`, then open `http://localhost:3000/rec
 
 **Question 3:** look at the `Content-Type` header for `/` and for `/recipes`. What's different, and which one is for people and which one is for programs?
 
+For '/' the content-type is text/html and for '/recipes' it is application/json. Text/html is more for people and application/json is for programs. 
+
 ## 5. One recipe: a path parameter
 
 ```js
@@ -73,11 +82,17 @@ Send the `/recipes/1` request. `:index` is a **path parameter**: whatever is in 
 
 **Question 4:** which recipe is `/recipes/1`? Why not the first one?
 
+The second recipe, chicken stir fry. It is not the first one because when /recipes/1 is used the index is set to 1 and because index starts at 0 it gives the second recipe. 
+
 **TODO:** send the `/recipes/99` request. **Question 5:** what happens, and what does the terminal say? Fix it: put this line right after `const recipe = ...`, and send it again:
+
+We get a type error. 
 
 ```js
 if (!recipe) return res.status(404).send("No recipe number " + index);
 ```
+
+No recipe number 99
 
 ## 6. Search: a query parameter
 
@@ -92,6 +107,8 @@ app.get("/search", function (req, res) {
 Send the `/search?ingredient=Eggs` request. Everything after `?` is the **query string**, and Express puts it in `req.query`.
 
 **TODO:** change `Eggs` to `eggs` and send it again. **Question 6:** what comes back, and why? (Optional: make the search work for any capitalisation.)
+
+'[]' comes back after changing the capitalization. 
 
 Commit: `Part 1: recipes`
 
@@ -135,6 +152,8 @@ app.get("/jokes/:id", function (req, res) {
 
 **Question 7:** why do we need `parseInt` here? What would `joke.id === id` do without it?
 
+Parameteres are parsed as strings and parseInt makes it an integer. "1" vs 1. id would remain a string. 
+
 **TODO:** send the `/jokes/99` request. It says `200 OK` but sends nothing back. Fix it the same way as step 5, with a `404`.
 
 ## 8. Filter jokes by type
@@ -159,6 +178,8 @@ Send request **4**. To get your new joke back, change request **2** to `/jokes/1
 
 **TODO:** save `index.js` (that restarts the server), then send `/jokes/13` again.
 **Question 8:** where did your joke go? Why? What would fix it? (Hint: Part 3.)
+
+It is gone. Storing it in a database like MongoDB would fix it. 
 
 ## 10. Put and patch
 
@@ -194,6 +215,8 @@ Send requests **5** and **6**.
 **TODO:** in request **5** (PUT), delete `text=...&` so it only sends `type=Programming`, and send it again.
 **Question 9:** what happened to the joke's text? So what is the difference between PUT and PATCH?
 
+The joke's text is gone. The difference between PUT and PATCH is that PUT is a full replacement and PATCH changes an aspect of a joke. 
+
 ## 11. Delete a joke
 
 ```js
@@ -212,8 +235,12 @@ Send request **7**, then send it again.
 
 **Question 10:** what status do you get the first time, and the second time?
 
+OK status the first time and "error": "No joke with id 4" the second time. 
+
 **TODO:** with joke 4 deleted, send request **4** (POST) once.
 **Question 11:** what `id` does the new joke get? Is there already a joke with that id? Why is that a problem? (Optional: fix it.)
+
+The id it gets is 12. There is already a joke with that id. 
 
 **Comment your `Jokes/index.js`** in your own words: one comment above each route saying what it does.
 
