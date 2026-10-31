@@ -331,7 +331,12 @@ Then type each of these and look at what it says:
 | `exit` | log out |
 
 **Question 15:** what versions of Node and MongoDB are on your server? Are they the same as on your laptop?
+
+node has version 24.22.1 and MongoDB v8.0.34. Not the same my laptop has 26.1.0 for node and does not have MongoDB. 
+
 **Question 16:** how much disk space and memory does your server have? Is that more or less than your laptop?
+
+19 GB total on the disk space, 5.8 GB total for memory. Less than my laptop. 
 
 ---
 
